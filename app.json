@@ -1,0 +1,59 @@
+{
+  "expo": {
+    "name": "ReferralApp",
+    "scheme": "com.yourcompany.referralapp",
+    "slug": "referral-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourcompany.referralapp",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to take pictures for patient referrals.",
+        "NSLocationWhenInUseUsageDescription": "This app uses your location to improve referral accuracy."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.yourcompany.referralapp",
+      "permissions": ["CAMERA", "ACCESS_FINE_LOCATION"]
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "https://bun.sh"
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow ReferralApp to access your camera."
+        }
+      ]
+    ],
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/your-project-id"
+    }
+  }
+}
